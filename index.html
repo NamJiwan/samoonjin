@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>사문진 360vr 이미지</title>
+    <style>
+      .panaloma {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="panaloma"></div>
+    </section>
+    <script src="js/three.min.js" defer></script>
+    <script src="js/panolens.min.js" defer></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", (e) => {
+        const panoImage = document.querySelector(".panaloma");
+        const mainImage = "test1.jpg";
+
+        const panorama = new PANOLENS.ImagePanorama(mainImage);
+        const viewer = new PANOLENS.Viewer({
+          container: panoImage,
+        });
+        viewer.add(panorama);
+      });
+    </script>
+  </body>
+</html>
