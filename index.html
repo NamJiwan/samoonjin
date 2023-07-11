@@ -27,6 +27,7 @@
         const panorama = new PANOLENS.ImagePanorama(mainImage);
         const viewer = new PANOLENS.Viewer({
           container: panoImage,
+          autoRotate: true,
         });
         viewer.add(panorama);
       });
